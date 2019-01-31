@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: [],
-      pageCount : null,
+      pageCount : 10,
       offset: 0,
       page: 1,
       search: ''
