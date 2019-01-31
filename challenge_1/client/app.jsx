@@ -18,15 +18,15 @@ class App extends React.Component {
   componentDidMount() {
     this.loader();
   };
-  update(){
-    axios
-      .put(`/events/1`,
-      {"date": "-300", "description": "Pilgrims travel to the healing temples of Asclepieion to be cured of their ills. After a ritual purification the followers bring offerings or sacrifices.", "lang": "en", "category1": "By place", "category2": "Greece", "granularity": "year"},
-            {headers:{"Content-Type": "application/json"}}
-          )
-          .then(r=> console.log("updated"))
-          .catch(e => console.log(e))
-  }
+  // update(){
+  //   axios
+  //     .put(`/events/1`,
+  //     {"date": "-300", "description": "Pilgrims travel to the healing temples of Asclepieion to be cured of their ills. After a ritual purification the followers bring offerings or sacrifices.", "lang": "en", "category1": "By place", "category2": "Greece", "granularity": "year"},
+  //           {headers:{"Content-Type": "application/json"}}
+  //         )
+  //         .then(r=> console.log("updated"))
+  //         .catch(e => console.log(e))
+  // }
 
   loader(){
     axios
@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Search search={this.update.bind(this)} query={this.query.bind(this)}/>
+        <Search search={this.search.bind(this)} query={this.query.bind(this)}/>
         <DataList data={this.state.data} />
         <ReactPaginate
           previousLabel={"previous"}
