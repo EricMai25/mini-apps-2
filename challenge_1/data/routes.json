@@ -1,0 +1,6 @@
+{
+    "/events/*" : "/$description",
+    "/events/:description": "/events?description=:description",
+    "/events/:category" : "/events?category=:category"
+
+}
