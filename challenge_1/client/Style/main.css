@@ -1,0 +1,12 @@
+.pagination li{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 2px;
+    border: 1px grey solid;
+}
+
+.paginate li:hover{
+    color: red
+}
+
